@@ -1,0 +1,36 @@
+# Inicializar repositório
+git init
+
+# Adicionar arquivos
+git add .
+
+# Fazer commit
+git commit -m "Inicialização do projeto"
+
+# Criar branch
+git branch feature/desenvolvimento
+
+# Trocar para branch
+git checkout feature/desenvolvimento
+
+# Modificar arquivos
+# ...
+
+# Adicionar mudanças
+git add .
+
+# Fazer commit
+git commit -m "Adicionada funcionalidade X"
+
+# Trocar para branch principal
+git checkout master
+
+# Integrar mudanças
+git merge feature/desenvolvimento
+
+# Enviar para GitHub
+git remote add origin https://github.com/seu_usuario/conversor_unidades.git
+git push origin master
+
+# Atualizar repositório local
+git pull origin master
