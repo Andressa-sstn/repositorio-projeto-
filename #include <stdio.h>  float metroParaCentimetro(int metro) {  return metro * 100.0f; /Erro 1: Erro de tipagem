@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+float metroParaCentimetro(int metro) {
+ return metro * 100.0f; // correto
+}
+
+int main() {
+ float valor = 5.5;
+ int resultado = metroParaCentimetro(valor); // erro de tipagem
+ printf("%.2f metros é igual a %d centímetros\n", valor, resultado);
+ return 0;
+}
