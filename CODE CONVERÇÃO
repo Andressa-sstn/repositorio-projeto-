@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+// Funções para conversão
+float metroParaCentimetro(float metro) {
+ return metro * 100;
+}
+
+float metroParaMilimetro(float metro) {
+ return metro * 1000;
+}
+
+float centimetroParaMetro(float centimetro) {
+ return centimetro / 100;
+}
+
+float centimetroParaMilimetro(float centimetro) {
+ return centimetro * 10;
+}
+
+float milimetroParaMetro(float milimetro) {
+ return milimetro / 1000;
+}
+
+float milimetroParaCentimetro(float milimetro) {
+ return milimetro / 10;
+}
+
+int main() {
+ int opcao;
+ float valor;
+
+ printf("Conversor de Unidades de Comprimento\n");
+ printf("1. Metro para Centímetro\n");
+ printf("2. Metro para Milímetro\n");
+ printf("3. Centímetro para Metro\n");
+ printf("4. Centímetro para Milímetro\n");
+ printf("5. Milímetro para Metro\n");
+ printf("6. Milímetro para Centímetro\n");
+ printf("Escolha uma opção: ");
+ scanf("%d", &opcao);
+
+ printf("Digite o valor: ");
+ scanf("%f", &valor);
+
+ switch (opcao) {
+ case 1:
+ printf("%.2f metros é igual a %.2f centímetros\n", valor, metroParaCentimetro(valor));
+ break;
+ case 2:
+ printf("%.2f metros é igual a %.2f milímetros\n", valor, metroParaMilimetro(valor));
+ break;
+ case 3:
+ printf("%.2f centímetros é igual a %.2f metros\n", valor, centimetroParaMetro(valor));
+ break;
+ case 4:
+ printf("%.2f centímetros é igual a %.2f milímetros\n", valor, centimetroParaMilimetro(valor));
+ break;
+ case 5:
+ printf("%.2f milímetros é igual a %.2f metros\n", valor, milimetroParaMetro(valor));
+ break;
+ case 6:
+ printf("%.2f milímetros é igual a %.2f centímetros\n", valor, milimetroParaCentimetro(valor));
+ break;
+ default:
+ printf("Opção inválida!\n");
+ }
+
+ return 0;
+}
