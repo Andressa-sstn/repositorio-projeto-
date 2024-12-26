@@ -1,0 +1,17 @@
+\\Erro de fluxo que são possiveis de acontecer 
+
+#include <stdio.h>
+
+float metroParaCentimetro(float metro) {
+ if (metro < 0) {
+ return metro * 100.0f; // erro lógico (deveria retornar erro)
+ }
+ return metro * 100.0f;
+}
+
+int main() {
+ float valor = -5.5;
+ float resultado = metroParaCentimetro(valor);
+ printf("%.2f metros é igual a %.2f centímetros\n", valor, resultado);
+ return 0;
+}
